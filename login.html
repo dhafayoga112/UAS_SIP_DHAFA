@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .container h3 {
+            font-size: 24px;
+            margin-bottom: 5px;
+            color: #4CAF50;
+        }
+
+        .container h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .container h1 {
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: #666;
+        }
+
+        .container form {
+            margin-top: 20px;
+        }
+
+        .container label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .container input[type="text"],
+        .container input[type="password"],
+        .container input[type="email"],
+        .container select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .container p {
+            margin-top: 10px;
+        }
+
+        .container p a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .container p a:hover {
+            text-decoration: underline;
+        }
+
+        .container #message {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3>SIJUKAV46</h3>
+        <h2>Halaman Login</h2>
+        <h1>Sistem Informasi Penjualan Kavling Tanah</h1>
+
+        <form onsubmit="return login(event)">
+            <select name="user_type" id="option">
+                <option value="Admin">Admin</option>
+                <option value="Penjual">Penjual</option>
+                <option value="Pembeli">Pembeli</option>
+            </select>
+            <br>
+            <label>Username</label>
+            <input type="text" id="username" placeholder="Masukkan Username" required>
+            <br>
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Masukkan Password" required>
+            <br>
+
+            <input type="submit" value="Login">
+            <p>Belum Punya Akun? <a href="register.html">Register</a></p>
+            <p>Hanya Pengunjung Biasa? <a href="home.html">Kembali ke Halaman Home</a></p>
+        </form>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function login(event) {
+            event.preventDefault();
+            var option = document.getElementById("option").value;
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var messageElement = document.getElementById("message");
+
+            if (option === "Admin" && username === "admin" && password === "admin123") {
+                messageElement.innerHTML = "Login successful as Admin. Redirecting to admin page...";
+                setTimeout(function() {
+                    window.location.href = "halaman_admin.html";
+                }, 2000);
+            } else if (option === "Penjual" && username === "penjual" && password === "penjual123") {
+                messageElement.innerHTML = "Login successful as Penjual. Redirecting to penjual page...";
+                setTimeout(function() {
+                    window.location.href = "halaman_penjual.html";
+                }, 2000);
+            } else if (option === "Pembeli" && username === "pembeli" && password === "pembeli123") {
+                messageElement.innerHTML = "Login successful as Pembeli. Redirecting to pembeli page...";
+                setTimeout(function() {
+                    window.location.href = "halaman_pembeli.html";
+                }, 2000);
+            } else {
+                messageElement.innerHTML = "Username or password is incorrect.";
+            }
+
+            return false;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+body {
+    background-image: url('BG1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: arial;
+
+}
+/* display: flex; */
+/* justify-content: center;
+align-items: center; */
+/* height: 100vh;
+margin: 0; */
+/* background-image: url("path_to_your_image.jpg");
+background-size: cover;
+background-position: center; */
+/* font-family: Arial, sans-serif; */
+
+
+.container {
+text-align: center;
+background-color: rgba(199, 227, 255, 0.8);
+padding: 30px;
+border-radius: 80px;
+
+}
+
+.container h1 {
+font-size: 48px;
+margin: 10px 0;
+position:10vh 
+}
+
+.btn {
+display: inline-block;
+padding: 10px 20px;
+font-size: 26px;
+text-decoration: none;
+color: #fff;
+background-color: #007bff;
+border: none;
+border-radius: 26px;
+transition: background-color 0.3s;
+}
+
+.btn:hover {
+background-color: #0056b3;
+}

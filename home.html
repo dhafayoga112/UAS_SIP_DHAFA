@@ -1,0 +1,207 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Informasi Penjualan Kavling</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+        box-sizing: border-box;
+    }
+    body {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.538), rgba(0, 0, 0, 0.7)), url(https://media.giphy.com/media/svIaVieSrBFvQdxY2e/giphy.gif);
+        background-position: center;
+        background-size: cover;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        padding: 0 8%;
+    }
+    .logo-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .logo {
+        width: 80px;
+        cursor: pointer;
+    }
+    .navbar ul {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        padding: 0;
+    }
+    .navbar ul li {
+        list-style: none;
+        margin-left: 20px;
+    }
+    .navbar ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 15px;
+        font-weight: bold;
+        transition: color 0.3s;
+        padding: 10px 15px;
+        border-radius: 5px;
+    }
+    .navbar ul li a:hover {
+        color: crimson;
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 60px;
+    }
+    .col {
+        flex-basis: 33%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+    .card {
+        width: 240px;
+        height: 300px;
+        border-radius: 10px;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        background-size: cover;
+        background-position: center;
+        transition: transform 0.3s;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+    }
+    .card h5 {
+        color: #fff;
+        text-shadow: 0 0 5px #999;
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 10px;
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 5px 10px;
+        border-radius: 5px;
+        width: 90%;
+    }
+    .card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    .card:hover::before {
+        opacity: 1;
+    }
+    .card:hover h5 {
+        color: #fff;
+    }
+    .card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: transform 0.3s;
+    }
+    .card:hover img {
+        transform: scale(1.05);
+    }
+    h1 {
+        color: #fff;
+        font-size: 80px;
+        text-align: center;
+        margin-bottom: 20px;
+        text-shadow: 0 0 5px #999;
+    }
+    h1 span {
+        color: crimson;
+        font-weight: bold;
+    }
+    p {
+        color: #fff;
+        font-size: 15px;
+        line-height: 1.5;
+        text-align: center;
+        text-shadow: 0 0 5px #999;
+    }
+    /* Additional styles */
+    @media (max-width: 768px) {
+        .col {
+            flex-basis: 100%;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="image/logoundip.png" class="logo">
+        </div>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="login.html">LOGIN</a></li>
+                    <li><a href="register.html">REGISTER</a></li>
+                    <li><a href="http://kavlingsiapjual_kelurahansindurjan_purworejo.gis.co.id/">MAP</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <h1>SIJUKAV<span>46</span></h1>
+        <p>Sistem Informasi Penjualan Kavling Tanah Kelurahan Sindurjan, Kecamatan Purworejo, Kabupaten Purworejo</p>
+
+        <div class="row">
+            <div class="col">
+                <a href="kavling_tanah.html">
+                    <div class="card card1">
+                        <img src="image/bidang.jpg">
+                        <h5>Kavling dan Bidang Tanah</h5>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="http://bidangtanah_kelurahansindurjan.gis.co.id/">
+                    <div class="card card2">
+                        <img src="image/bidang_tanah.jpg">
+                        <h5>Bidang Tanah Kelurahan Sindurjan</h5>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="http://kavlingsiapjual_kelurahansindurjan_purworejo.gis.co.id/">
+                    <div class="card card3">
+                        <img src="image/kavling.jpg">
+                        <h5>Kavling Siap Jual Kelurahan Sindurjan</h5>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

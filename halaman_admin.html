@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Halaman Admin</title>
+  <style>
+    body {
+      background-color: #f1f1f1;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      width: 600px;
+      margin: 50px auto;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .header {
+      padding: 20px;
+      text-align: center;
+      background-color: #333;
+      color: #fff;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #ddd;
+    }
+
+    .menu-item {
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: #666;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .menu-item:hover {
+      background-color: #555;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    .footer {
+      padding: 20px;
+      text-align: center;
+      background-color: #333;
+      color: #fff;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+
+    .logout-btn {
+      cursor: pointer;
+      color: blue;
+      text-decoration: underline;
+    }
+  </style>
+  <script>
+    function goToPage(page) {
+      window.location.href = page;
+    }
+
+    function logout() {
+      // Logika logout disini
+      alert('Anda telah logout!');
+      // Redirect ke halaman login atau halaman utama
+      goToPage('login.html');
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Halaman Admin</h1>
+    </div>
+    <div class="menu">
+      <div class="menu-item" onclick="goToPage('http://bidangtanah_kelurahansindurjan.gis.co.id/')">Peta Bidang Tanah</div>
+      <div class="menu-item" onclick="goToPage('http://kavlingsiapjual_kelurahansindurjan_purworejo.gis.co.id/')">Peta Kavling Siap Jual</div>
+      <div class="menu-item" onclick="goToPage('data_pengguna.html')">Data Pengguna</div>
+    </div>
+    <div class="content">
+      <h2>Admin</h2>
+      <p>Admin dapat melakukan verifikasi data pengguna yaitu data pembeli dan data penjual. Selain itu, admin dapat melakukan update pada kavling yang akan dijual.</p>
+    </div>
+    <div class="footer">
+      <p>SIJUKAV46</p>
+      <div class="logout-btn" onclick="logout()">Logout</div>
+    </div>
+  </div>
+</body>
+</html>
